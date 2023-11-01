@@ -9,7 +9,7 @@ const Topbar = () => {
         <h3 className="font-bold text-gray-700">
           <span> Ollyo Task - </span>
           <a
-            className="text-emerald-400 hover:underline"
+            className="text-emerald-400 underline"
             href="https://www.myselfrakib.com"
             target="_blank"
           >
@@ -20,7 +20,7 @@ const Topbar = () => {
 
       <a
         className="flex gap-2 items-center bg-gradient-to-r text-xs from-cyan-500 to-emerald-500 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg font-semibold border border-black/10"
-        href="#"
+        href="https://github.com/mohammedrakib944/drag-and-drop"
         target="_blank"
       >
         <SourceCode /> Source Code

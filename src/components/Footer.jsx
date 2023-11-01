@@ -8,11 +8,9 @@ const Footer = () => {
         href="https://rakib-blog.vercel.app"
         target="_blank"
       >
-        Currently Working
+        Currently Working Project
       </a>
-      <p className="hover:text-gray-700 hover:underline">
-        rakibuzzaman.contact@gmail.com
-      </p>
+      <p>rakibuzzaman.contact@gmail.com</p>
     </div>
   );
 };

@@ -3,10 +3,10 @@ import { useState, useRef } from "react";
 import ImgIcon from "../assets/icons/ImgIcon";
 import Image from "./Image";
 import { useData } from "../context/ImageContext";
+import DropIcon from "../assets/icons/DropIcon";
 
 const Gallery = () => {
   const { data, updateData } = useData();
-
   const [onEnter, setOnEnter] = useState(-1);
   const dragItem = useRef(null);
   const dragOverItem = useRef(null);
@@ -34,11 +34,9 @@ const Gallery = () => {
       {data.map((item, index) => (
         <div
           key={item.id}
-          className={`rounded-xl duration-200 ${
+          className={`rounded-xl duration-200 relative ${
             index === 0 && "col-span-2 row-span-2"
-          } ${
-            index === onEnter && "opacity-0 bg-gray-400 border-dashed border-2"
-          }}`}
+          } }`}
           draggable
           onDragStart={() => (dragItem.current = index)}
           onDragOver={() => (dragOverItem.current = index)}
@@ -46,6 +44,14 @@ const Gallery = () => {
           onDragEnd={handleDragEnd}
         >
           <Image item={item} />
+
+          {/* Placeholder */}
+          {index === onEnter && (
+            <div className="absolute w-full h-full top-0 left-0 rounded-xl bg-gray-300 border border-dashed border-gray-500 z-50 flex items-center justify-center gap-2 font-semibold text-gray-400">
+              <DropIcon />
+              Drop
+            </div>
+          )}
         </div>
       ))}
 

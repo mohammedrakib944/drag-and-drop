@@ -22,7 +22,7 @@ const Image = ({ item: imageItem, featured }) => {
         className={
           isChecked
             ? "absolute duration-75 w-full h-full px-6 py-4 bg-emerald-400/50 rounded-xl"
-            : "-top-14 absolute group-hover:top-0 duration-100 px-6 py-4 bg-emerald-400/50 rounded-br-3xl rounded-tl-xl"
+            : "-top-14 absolute group-hover:top-0 duration-100 px-6 py-4 bg-emerald-400/50 cursor-grabbing rounded-br-3xl rounded-tl-xl"
         }
       >
         <input onChange={handleChecked} type="checkbox" className="scale-150" />
